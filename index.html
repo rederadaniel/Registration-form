@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+  <body>
+    <nav>
+        <div class="logo-container">
+            <img src="https://media.tenor.com/ctfKGqckPcMAAAAM/hahahaha-nikon.gif" alt="Logo" class="logo">
+            <p><strong>My Website</strong></p>
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Service</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="form-toggle">
+            <button id="loginBtn" class="toggle-button">Login</button>
+            <button id="registerBtn" class="toggle-button">Register</button>
+        </div>
+
+<!-- Registration Form -->
+<form id="registerForm" class="form active" method="POST" action="">
+    <h2>Register</h2>
+    <input type="text" name="registerUsername" placeholder="Username" required>
+    <input type="email" name="registerEmail" placeholder="Email" required>
+    <div class="show-password">
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <i class="eye-icon fas fa-eye" id="toggleRegisterPassword" aria-label="Show password" onclick="togglePasswordVisibility('registerPassword', 'toggleRegisterPassword')"></i>
+    </div>
+    <button type="submit" name="register">Register</button>
+    <p>Already have an account? <span id="loginLnk" class="link-style">Log in here</span></p>
+</form>
+
+<!-- Login Form -->
+<form id="loginForm" class="form active" method="POST" action="">
+    <h2>Login</h2>
+    <input type="email" name="loginEmail" placeholder="Email" required>
+    <div class="show-password">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <i class="eye-icon fas fa-eye" id="toggleLoginPassword" aria-label="Show password" onclick="togglePasswordVisibility('loginPassword', 'toggleLoginPassword')"></i>
+    </div>
+    <button type="submit" name="login">Login</button>
+    <button type="button" id="forgotPasswordBtn" class="link-style">Forgot Password?</button>
+    <p>Don't have an account? <span id="registerLnk" class="link-style">Sign up here</span></p>
+</form>
+
+
+        <!-- Modal for forgot password -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <h3>Forgot Password</h3>
+            <p>Enter your email address. A link will be sent to create a new password.</p>
+            <input type="email" id="forgotEmail" placeholder="Email" required>
+            <button id="sendResetLinkBtn">Send Reset Link</button>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images6.alphacoders.com/345/thumb-1920-345897.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    color: #17b38c;
+}
+
+    h2 {
+    margin-top: 10%;
+}
+
+/* Navigation styles */
+nav {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    transition: color 0.5s, transform 0.6s;
+}
+
+nav a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Logo container */
+.logo-container {
+    position: absolute;
+    left: 50px; /* Fixed positioning */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 85px; /* logo size */
+    height: auto;
+}
+
+/* Form container */
+.container {
+    background: rgba(10, 9, 9, 0.8);
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 410px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Toggle buttons */
+.form-toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toggle-button {
+    flex: 1;
+    border: none;
+    background: rgba(68, 68, 68, 0.6);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.toggle-button:hover {
+    background: #666;
+    transform: scale(1.05);
+}
+
+/* Form display */
+.form {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -1px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Active form display */
+#loginForm {
+    display: flex;
+    transform: translateY(0.5);
+}
+
+/* Input styling */
+.form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus {
+    border-color: #00ff55;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 245, 73, 0.5);
+    transform: scale(1.02);
+}
+
+    /* Active form */
+.form.active {
+    opacity: 1;
+    animation: fadeInOut 0.9s forwards; /* Apply fade in/out animation */
+}
+
+/* Fade in/out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Show password */
+.show-password {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.eye-icon {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Button styling */
+.form button {
+    padding: 10px;
+    border: none;
+    background: #28a744;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.1s, transform 0.1s ease-in-out, box-shadow 0.3s;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.form button:hover {
+    background: #218837;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(10, 9, 9, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Message styling */
+.message {
+    color: green;
+    display: none;
+    font-weight: bold;
+}
+
+/* Link styling */
+.link-style {
+    color: #00ff55;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.link-style:hover {
+    color: #4e525e;
+}
